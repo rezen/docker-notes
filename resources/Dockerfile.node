@@ -1,0 +1,12 @@
+FROM debian:jessie
+RUN apt-get update && apt-get install -y curl
+ARG NODE_VERSION
+RUN mkdir /app && mkdir -p /opt/node && cd /opt/node && \ 
+  echo $NODE_VERSION > /opt/node/version.txt && \
+  printenv && \
+  curl -O https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz && \
+  tar --strip-components 1 -xzf  node-v$NODE_VERSION-linux-x64.tar.gz
+
+WORKDIR /app
+COPY . /app
+ENTRYPOINT ["/opt/node/bin/node"]
