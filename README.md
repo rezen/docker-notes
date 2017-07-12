@@ -10,4 +10,6 @@
 - [Tools](07_tools.md)
 - [Orchestration with Swarm](08_orchestration-swarm.md)
 - [Networking](09_networking.md)
+- [In Production](80_in-production.md)
+- [Security](90_security.md)
 - [Resources](98_resources.md)
