@@ -11,3 +11,4 @@ to learn about things to avoid and things to do!
 - https://valdhaus.co/writings/docker-misconceptions/
 - http://blog.kontena.io/docker-in-production-good-bad-ugly/
 - https://www.iron.io/docker-in-production-what-weve-learned/
+- https://medium.com/statuscode/debugging-a-docker-heisenbug-in-production-586ccb265f7c
