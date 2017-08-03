@@ -10,6 +10,7 @@
 - https://www.slideshare.net/PhilEstes/docker-london-container-security
 - https://www.slideshare.net/Docker/docker-security-workshop-slides
 - https://coreos.com/os/docs/latest/coreos-hardening-guide.html
+- https://dadario.com.br/courses/docker-security-fundamentals/
 
 ## Secrets
 - https://hackernoon.com/managing-secrets-in-docker-swarm-6da766f1357d

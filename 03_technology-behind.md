@@ -12,6 +12,7 @@ of containers
 - https://runc.io/
 - https://www.opencontainers.org/
 - https://ericchiang.github.io/post/containers-from-scratch/
+- https://blog.jessfraz.com/post/containers-zones-jails-vms/
 
 ### Docker Engine
 Docker Engine does all the work, interacting with the kernel features/modules to build & run
