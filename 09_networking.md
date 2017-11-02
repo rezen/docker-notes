@@ -18,3 +18,17 @@ Internal DNS server
 - https://www.slideshare.net/lbernail/deep-dive-in-docker-overlay-networks
 - https://www.pluralsight.com/courses/docker-networking
 
+```shell
+# Expose port to already running container
+# Get ip of container
+docker inspect $(docker ps | grep openvas | cut -d' ' -f1) | grep '"IPAddress"' | tr -s ' ' | cut -d'"' -f 4 | uniq
+
+CONTAINER_IP=172.17.0.2
+CONTAINER_PORT=9390
+HOST_PORT=9390
+
+sudo iptables -t nat -A  DOCKER -p tcp --dport "${HOST_PORT}" -j DNAT --to-destination "${CONTAINER_IP}:${HOST_PORT}"
+sudo iptables -t nat -L --line-numbers
+sudo iptables -t nat -D  DOCKER 
+```
+- https://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container
