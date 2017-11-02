@@ -12,6 +12,8 @@
 - https://codefresh.io/blog/using-docker-generate-ssl-certificates/
 - http://tech.paulcz.net/2016/01/secure-docker-with-tls/
 - https://github.com/jessfraz/amicontained
+- https://coreos.com/os/docs/latest/coreos-hardening-guide.html
+- https://dadario.com.br/courses/docker-security-fundamentals/
 
 ## Secrets
 - https://hackernoon.com/managing-secrets-in-docker-swarm-6da766f1357d

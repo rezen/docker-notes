@@ -14,6 +14,7 @@ system tools, system libraries, settings."
 
 - https://www.docker.com/what-container
 - http://www.infoworld.com/article/3072929/linux/containers-101-linux-containers-and-docker-explained.html
+- https://opensource.com/article/17/7/how-linux-containers-evolved
 
 ### Alternatives
 https://coreos.com/rkt/docs/latest/rkt-vs-other-projects.html#rkt-vs-runc
