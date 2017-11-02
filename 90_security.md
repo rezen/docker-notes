@@ -9,6 +9,9 @@
 - https://www.oreilly.com/ideas/five-security-concerns-when-using-docker
 - https://www.slideshare.net/PhilEstes/docker-london-container-security
 - https://www.slideshare.net/Docker/docker-security-workshop-slides
+- https://codefresh.io/blog/using-docker-generate-ssl-certificates/
+- http://tech.paulcz.net/2016/01/secure-docker-with-tls/
+- https://github.com/jessfraz/amicontained
 
 ## Secrets
 - https://hackernoon.com/managing-secrets-in-docker-swarm-6da766f1357d
