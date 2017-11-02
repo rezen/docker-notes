@@ -16,6 +16,28 @@
 
 docker exec -it b345khkasd /bin/bash
 
+## Sharing Files
+Containers are designed to be ephemeral, but with most apps, you have 
+state you want to persist, be it files or database data. Additionally 
+you may have content outside of the container you want it to access, but 
+don't want it bundled into the container image (reasons of re-use and size reduction).
+Mounting volumes allows you to achieve this goal when running containers.
+
+```
+# You can share a host directory with the '-v' flag
+# so in the container you can access those files
+# -v $host_path:$container_path
+
+# Volumes default to read+write
+docker run -v /host-dir:/data/container --name shamu whale-greeting
+
+# But you can mount with readonly volume
+docker run --name www-01 
+    -v /home/user:/root:ro
+    -v /var/www/html:/var/www/html
+    nginx
+```
+
 
 ## Cleanup
 

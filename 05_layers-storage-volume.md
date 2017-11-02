@@ -17,10 +17,30 @@ dockerfileview mysql:latest | egrep 'RUN|ADD|COPY|FROM' | wc -l
 Layers are parts of the image
 
 ## Volumes
-Volumes are used to share data with the host and/or between containers. Voluems bypass the union filesystem.
+Volumes are used to share data with the host and/or between containers. Volumes bypass the union filesystem.
 
 - There are three types, `host`, `named`, `anonymous`
 - https://docs.docker.com/glossary/?term=volume
+- https://docs.docker.com/engine/admin/volumes/volumes/
+- https://github.com/moby/moby/issues/19990 # Must read!
+### Sharing
+To share data between containers, create a named volume and mount that volume to containers.
+
+```shell
+# Create volume
+docker volume create --name www_shared
+
+# If you want to create a named volume that maps to a location on the host
+docker volume create --opt type=none --opt device=/var/log --opt o=bind host_logs
+
+# Mount volumes with share
+docker run --name www-01 -v www_shared:/data/www_shared nginx
+docker run --name www-02 -v www_shared:/data/www_shared nginx
+
+```
+
+### Plugins
+- https://github.com/CWSpear/local-persist
 
 ## Copying Files
 You can copy files from a running container to your local file system. This is pretty common
@@ -31,6 +51,7 @@ if you are using docker to build binaries for example.
 - https://github.com/gchudnov/docker-tools
 
 ## Cleanup
-Remove unused volumes
+Remove unused volumes. Be careful, a volume may be unused at the moment but still have data
+that you need to keep.
 
 `$ docker volume prune`
