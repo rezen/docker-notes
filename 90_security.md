@@ -62,6 +62,8 @@ docker run -p 6060:6060 --link db:postgres -d --name clair arminc/clair-local-sc
 - https://dadario.com.br/courses/docker-security-fundamentals/
 - https://www.nearform.com/blog/securing-docker-containers-on-aws/
 - https://www.delve-labs.com/articles/docker-security-production-2/
+- http://rhelblog.redhat.com/2016/10/17/secure-your-containers-with-this-one-weird-trick/
+
 
 ### Secrets
 - https://hackernoon.com/managing-secrets-in-docker-swarm-6da766f1357d

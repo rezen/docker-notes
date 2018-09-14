@@ -15,6 +15,17 @@ dockerfileview mysql:latest | egrep 'RUN|ADD|COPY|FROM' | wc -l
 
 ## Layers
 Layers are parts of the image
+- https://boxboat.com/2017/07/25/fixuid-change-docker-container-uid-gid/
+- https://www.jujens.eu/posts/en/2017/Jul/02/docker-userns-remap/
+- https://stackoverflow.com/questions/23544282/what-is-the-best-way-to-manage-permissions-for-docker-shared-volumes
+- https://medium.com/@delitescere/docker-file-permissions-and-line-endings-9aced07d70f8
+- http://blog.ippon.tech/docker-and-permission-management/
+- https://blog.csanchez.org/2017/01/31/running-docker-containers-as-non-root/
+- https://www.tricksofthetrades.net/2016/03/14/docker-data-volumes/
+- https://jpetazzo.github.io/2015/01/13/docker-mount-dynamic-volumes/
+- https://deis.com/blog/2016/docker-storage-introduction/
+
+
 
 ## Volumes
 Volumes are used to share data with the host and/or between containers. Volumes bypass the union filesystem.
